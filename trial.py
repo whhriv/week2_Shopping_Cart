@@ -64,6 +64,7 @@ def main():
             print('\n\n Total: ')
             receipt = sum([i  for i in cart.values()])
             print( receipt*1.01)
+            print(float(receipt)*1.00)
             break
         else:
             continue
