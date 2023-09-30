@@ -1,3 +1,4 @@
+# from collections import Counter
 cart = {}
 inventory = {
     'Avacado': 10,
@@ -18,8 +19,18 @@ def main():
             print('\n\n:')
             print(inventory)  #add formating to style dict
             to_buy = input('\ntype item to add to cart\n :')
-            cart[to_buy] = '1'
-            print("\n\nyou have added" +' '+ to_buy + ' '+"to cart\n:")       
+            cart[to_buy] = 1
+            
+            
+            # if cart[to_buy] is not None:
+            #     cart[to_buy] += 1
+            # else:
+            #    cart.setdefault(to_buy, 0)
+            #    cart[to_buy] += 1
+                # cart[to_buy] = cart.get(to_buy, 0) +1
+                # cart[to_buy] += 1  
+            print("\n\nyou have added" +' '+ to_buy + ' '+"to cart\n:")   
+  
         #elif sel_option == *args
         
         elif sel_option == 'mycart':
@@ -39,3 +50,16 @@ def main():
         else:
             continue
 main()
+
+# for key in cart:
+#     result = 
+# [cart.values + 1 for value in cart]
+
+# def checkKey(cart, key):
+#     if key in cart.keys():
+#         cart.update({to_buy, +=1})
+def add (key):
+    if cart.has_key(key):
+        cart[key] += 1
+    else:
+        cart[key] = 1
